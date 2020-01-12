@@ -12,6 +12,8 @@ all: build
 
 .PHONY: build
 build:
+	@cd bitwarden_rs && \
+		docker build -t bitwardenrs -f docker/amd64/postgresql/Dockerfile.alpine .
 	@docker-compose -f docker-build.yaml build
 
 .PHONY: pull

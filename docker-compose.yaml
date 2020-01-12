@@ -6,10 +6,16 @@ services:
     ports:
       - 8080:80
 
-  mysql:
-    image: mysql:latest
+  postgres:
+    image: postgres:12.1
     ports:
-      - 3306:3306
+      - 5432:5432
     environment:
-      MYSQL_ROOT_PASSWORD: pass
-      MYSQL_DATABASE: data
+      POSTGRES_DB: data
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: pass
+    volumes:
+      - data:/var/lib/postgresql/data
+
+volumes:
+  data: ~
