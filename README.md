@@ -4,6 +4,8 @@
 
 > simple nginx setup for docker
 
+![](assets/docker-bitwardenrs.png)
+
 Please ★ this repo if you found it useful ★ ★ ★
 
 
